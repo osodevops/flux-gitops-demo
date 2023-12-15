@@ -11,4 +11,4 @@ spec:
     extract: $ver
   policy:
     semver:
-      range: '>=1.0'
+      range: '>=1.x'
