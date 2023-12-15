@@ -1,0 +1,14 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: production-podinfo-policy
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: production-podinfo
+  filterTags:
+    pattern: 'production+-(?P<ver>.*)'
+    extract: $ver
+  policy:
+    semver:
+      range: '>=1.0.0'

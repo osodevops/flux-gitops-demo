@@ -1,0 +1,9 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: production-podinfo
+  namespace: flux-system
+spec:
+  image: docker.io/osodevops/podinfo
+  interval: 1m0s
