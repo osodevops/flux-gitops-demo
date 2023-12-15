@@ -3,4 +3,3 @@ kind: Kustomization
 resources:
   - policy.yaml
   - registry.yaml
-  - podinfo.yaml
