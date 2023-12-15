@@ -28,7 +28,7 @@ spec:
           env:
             - name: PODINFO_UI_COLOR
               value: '#34577c'
-          image: osodevops/podinfo:1.3 # {"$imagepolicy": "flux-system:production-podinfo-policy"}
+          image: osodevops/podinfo:latest # {"$imagepolicy": "flux-system:production-podinfo-policy"}
           imagePullPolicy: IfNotPresent
           livenessProbe:
             exec:
