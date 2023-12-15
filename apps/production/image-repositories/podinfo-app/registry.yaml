@@ -6,4 +6,4 @@ metadata:
   namespace: flux-system
 spec:
   image: docker.io/osodevops/podinfo
-  interval: 10s
+  interval: 1m
