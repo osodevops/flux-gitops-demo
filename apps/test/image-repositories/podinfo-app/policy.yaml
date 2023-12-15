@@ -1,0 +1,11 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: test-podinfo-policy
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: test-podinfo
+  policy:
+    semver:
+      range: 1.x
