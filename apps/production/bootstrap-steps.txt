@@ -1,0 +1,20 @@
+flux bootstrap github \
+  --components-extra=image-reflector-controller,image-automation-controller \
+  --owner=osodevops \
+  --repository=flux-gitops-demo \
+  --branch=main \
+  --path="./apps/production" \
+  --read-write-key=true
+
+
+flux create source git detected-app \
+--url=ssh://git@github.com/osodevops/flux-gitops-demo \
+--branch=main
+
+
+flux create kustomization detected-app \
+--source=GitRepository/flux-system \
+--path="./apps/production/image-repositories" \
+--prune=true \
+--interval=5m \
+--namespace=flux-system
