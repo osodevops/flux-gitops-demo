@@ -6,9 +6,6 @@ metadata:
 spec:
   imageRepositoryRef:
     name: production-podinfo
-  filterTags:
-    pattern: 'production+-(?P<ver>.*)'
-    extract: $ver
   policy:
     semver:
       range: '>=1.x'
